@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #f1f1f1;
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: white;  
+  }
+  
+  .header h1 {
+    font-size: 50px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: -1%;
+  }
+  
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 20%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 80%;
+    background-color: #f1f1f1;
+    padding-left: 15px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #f1f1f1 ;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .registered{
+    padding: 20px;
+    background-color: none;
+    border: 1px solid rgb(216, 216, 216);
+    width: 100%;
+    height:500px;
+    overflow-y: scroll;
+    /* overflow-x: scroll; */
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .card1 {
+    background-color: white;
+    margin-top: 20px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+.topnav h1 {
+    font-size: 18px;
+}
+.topnav h1 span {
+	color: rgb(255, 72, 72);
+}
+
+/* The navigation links */
+
+.topnav h1 a {
+	color: #ffffff;
+	text-decoration: none;
+	/* text-shadow: 2px 2px 4px #000000; */
+}
+
+
+table { 
+	width: 100%; 
+	border-collapse: collapse;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: rgb(255, 255, 255); 
+	}
+
+th { 
+	background: #ff635d; 
+	color: white; 
+  font-weight: bold;
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid rgb(226, 226, 226);
+	text-align: center; 
+	font-size: 14px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: rgb(81, 202, 85);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 5%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-20 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+.col-30 {
+  float: left;
+  width: 30%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.pagination {
+  width: 30%;
+  display: inline-block;
+}
+.pagination1 {
+  margin-left:3%;
+  width: 30%;
+  display: inline-block;
+}
+.pagination2 {
+  margin-left:3%;
+  width: 30%;
+  display: inline-block;
+}
+.pagination3 {
+  margin-top:3%;
+  width: 30%;
+  display: inline-block;
+}
+.pagination4 {
+  margin-top:3%;
+  margin-left:3%;
+  width: 30%;
+  display: inline-block;
+}
+.pagination5 {
+  margin-top:3%;
+  margin-left:3%;
+  width: 30%;
+  display: inline-block;
+}
+
+.pagination3 a{
+  transform: rotate(15deg);
+}
+.pagination4 a{
+  transform: rotate(15deg);
+}
+.pagination5 a{
+  transform: rotate(15deg);
+}
+
+.list-item {
+  /* pointer-events: none; */
+  cursor: pointer;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  float: left;
+  padding: 4px 8px;
+  text-decoration: none;
+  margin-left: 25px;
+  background:rgb(235, 235, 235); 
+  transition: all .15s linear;
+  border-bottom: 2px solid #000000;
+  text-align: center;
+  height: 3.5em;
+  width: 2em;
+  line-height: 2.5em;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  box-shadow: -0.5em 0.5em 0 #e1e1e154;
+  transform: rotate(-15deg);
+}
+.list-item:hover {
+  background-color: rgb(255, 255, 255);
+   color:  #ff6e42; 
+   border-bottom: 2px solid #ff6e42;
+  -webkit-transform: translate(0, -0.9em);
+          transform: translate(0, -0.9em);
+  transition: all .15s linear;
+  box-shadow: -0.5em 1em 0 #e1e1e1;
+}
+.success{
+  border: 2px solid black;
+  border-radius: 5px;
+  float: right; margin-right: 1%; border-color: #4CAF50; color: green;padding: 10px 28px;font-size: 16px;cursor: pointer;
+  transition: all .15s linear;
+
+}
+.success:hover {
+  background-color: #4CAF50;
+  color: white;
+  transition: all .15s linear;
+
+}

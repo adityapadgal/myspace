@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+
+* {
+	box-sizing: border-box;
+  }
+
+body{
+	background: #f1f1f1;
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+.header-fixed {
+	/* background-image: url("lot.jpg"); */
+	background-color: rgb(39, 39, 39);
+	box-shadow:0 1px 1px #ccc;
+	padding: 20px 40px;
+	height: 250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #ffffff;
+	box-sizing: border-box;
+	top:-100px;
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float: left;
+    margin-top: 6.5%;
+    margin-left: -2%;
+	font-size: 90px;
+	line-height: 40px;
+	transition: all 0.35s ease-out;
+	/* margin: 0; */
+}
+
+.header-fixed .header-limiter h1 span {
+	color: rgb(255, 72, 72);
+	transition: all 0.35s ease-out;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+	transition: all 0.35s ease-out;
+}
+
+.header-fixed .header-limiter nav {
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a {
+	display: inline-block;
+	padding: 0 15px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
+	border: 1px solid rgb(59, 59, 59);
+	cursor: pointer;
+	transition: all 0.35s ease-out;
+}
+
+.header-fixed .header-limiter nav a:hover {
+	opacity: 1;
+	color: #ff6e6e;
+	border: 1px solid #ff6e6e;
+	transition: all 0.35s ease-out;
+}
+
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+    z-index: 1;
+	opacity: 0.9;
+	transition: all 0.35s ease-out;	
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 18px;
+    line-height: 30px;
+    margin-top: 0%;
+	margin-left: -10%;
+	text-shadow: 2px 2px 4px #000000;
+	transition: all 0.35s ease-out;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 17px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.header-fixed {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float:none;
+		margin-top: -2%;
+	}
+
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+
+	body.fixed .header-fixed {
+		display: none;
+	}
+
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(39, 39, 39);
+  height: auto;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 19px 16px;
+  text-decoration: none;
+  border-bottom: 5px solid rgb(88, 88, 88);
+  transition: all 0.35s ease-out;	
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  color: rgb(255, 94, 94);
+  transition: all 0.15s ease-out;
+  border-bottom: 5px solid rgb(255, 94, 94);
+  transition: all 0.35s ease-out;	
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: rgb(241, 241, 241);
+  width: 100%;
+  padding: 1px;
+  text-align: center;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card1 {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+	height: 380px;
+	overflow-y: scroll;
+  }  
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgb(61, 61, 61);
+  margin-top: 20px;
+  color: white;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+.search__container {
+	padding-top: 9px;
+}
+
+
+.search__input {
+	width: 30%;
+	padding: 12px 24px;
+	margin-left: -50%;
+	float: left;
+	background-color: transparent;
+	transition: transform 250ms ease-in-out;
+	font-size: 17px;
+	line-height: 18px;	
+	color: #000000;
+	/* background-color: transparent; */
+  	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-color: #f0f0f0;
+	background-size: 18px 18px;
+	background-position: 95% center;
+	border-radius: 50px;
+	border: 1px solid #000000;
+	transition: all 250ms ease-in-out;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+}
+
+.search__input::placeholder {
+		color: rgb(0, 0, 0);
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		font-size: 14px;
+	}
+
+.search__input:hover,
+	.search__input:focus{
+		padding: 12px 15px;
+		outline: 0;
+		border: 1px solid transparent;
+		border-bottom: 1px solid #ffffff;
+		border-radius: 2px;
+		background-position: 100% center;
+	}
+
+	.column {
+		float: left;
+		width: 25%;
+		padding: 0 10px;
+	  }
+	  
+	  /* Remove extra left and right margins, due to padding */
+	  .row1 {margin: 0 -5px; padding-bottom: 5px; padding-top: 20px;}
+	  
+	  /* Clear floats after the columns */
+	  .row1:after {
+		content: "";
+		display: table;
+		clear: both;
+	  }
+	  
+	  /* Responsive columns */
+	  @media screen and (max-width: 600px) {
+		.column {
+		  width: 100%;
+		  display: block;
+		  margin-bottom: 20px;
+		}
+	  }
+	  
+	  /* Style the counter cards */
+	  .card2 {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		text-align: center;
+		background-color: #ffffff;
+		height: 150px;
+		padding-top: 8px;
+		padding-left: 8px;
+		border-right:1px solid rgb(255, 255, 255);
+		transition: all 0.2s ease-out;	
+		cursor: pointer;
+	  }
+	  .card3{
+		text-align: center;
+		height: 280px;
+		width: 250px;
+		padding-top: 8px;
+		padding-left: 8px;
+		margin-top: 10%;
+		/* margin-left: 27.5%; */
+	  }
+	  .card4{
+		text-align: center;
+		height: 280px;
+		width: 250px;
+		padding-top: 8px;
+		padding-left: 8px;
+		/* margin-top: 10%; */
+		/* margin-left: 55%; */
+	  }
+	  .footer a {
+		color: rgb(255, 99, 88);
+		text-decoration: none;
+		cursor: context-menu;
+	}
+.subcard{
+	float: left;
+	width: 40%;
+	height: 134px;
+	background-color: rgb(255, 99, 88);
+}
+.card2:hover{
+	transition: all 0.2s ease-out;	
+	border-right:8px solid rgb(99, 99, 99);
+}
+.subcard1{
+	float: left;
+	width: 40%;
+	height: 134px;
+	background-color: rgb(88, 188, 255);
+}
+.subcard2{
+	float: left;
+	width: 40%;
+	height: 134px;
+	background-color: rgb(59, 230, 178);
+}
+.subcard3{
+	float: left;
+	width: 40%;
+	height: 134px;
+	background-color: rgb(192, 125, 255);
+}
+.accountlabel{
+	font-size: 60px;
+}
+.btn_book{
+	float: left;
+	margin-top: -4%;
+	margin-left: 90%;
+	border:none;
+	color: white;
+	border-radius: 2px;
+	background:none;
+	background-color: rgb(130, 216, 0);
+	height: 40px;
+	font-size: 15px;
+}
+
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 50px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	background-color: rgb(240, 240, 240);
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 90%;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 40px;
+	font-weight: bold;
+	/* width: 100%; */
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  														/* manage account modal */
+  .modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 50px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	transition: all 0.35s ease-out;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	background-color: rgb(240, 240, 240);
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 90%;
+	transition: all 0.35s ease-out;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 40px;
+	font-weight: bold;
+	/* width: 100%; */
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+												  
+  														/* manage account modal */
+
+  .modal1 {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 50px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	transition: all 0.35s ease-out;
+  }
+  
+  /* Modal Content */
+  .modal-content1 {
+	background-color: rgb(240, 240, 240);
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 90%;
+	height:630px;
+	overflow: auto; 
+	transition: all 0.35s ease-out;
+  }
+  
+  /* The Close Button */
+  .close1 {
+	color: #aaaaaa;
+	float: right;
+	font-size: 40px;
+	font-weight: bold;
+	/* width: 100%; */
+  }
+  
+  .close1:hover,
+  .close1:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+						  
+  													/* table add vehivle */
+
+  table { 
+	width: 100%; 
+	border-collapse: collapse;
+	}
+
+tr{ 
+	background: rgb(255, 255, 255); 
+	}
+
+th { 
+	background: #ff635d; 
+	color: white; 
+  font-weight: bold;
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid rgb(226, 226, 226);
+	text-align: center; 
+	font-size: 14px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr {border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+
+#vno, #country {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+#submit_vehicle {
+  background-color: rgb(81, 202, 85);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 10.5%;
+  margin-right: 1%;
+}
+
+#submit_vehicle:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-20 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+.col-30 {
+  float: left;
+  width: 30%;
+  margin-top: 6px;
+}
+
+.registered{
+    background-color: #aaa;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MySpace | Login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="loginstyle.css">
+    </head>
+
+    <body>
+    <div class="container" id="container">
+	    <div class="form-container sign-up-container">
+		    <form action="includes/signup.inc.php" method="post">
+			    <h1>Create Account</h1>
+			    <div class="social-container">
+				    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			    </div>
+			    <span>or use your email for registration</span>
+			    <input type="text" name="uid" placeholder="Username" required />
+			    <input type="email" name="mail" placeholder="Email" required />
+				<input type="password" name="pass" placeholder="Password" required />
+				<input type="tel" name="number" placeholder="Mobile Number" required />
+			    <button type="submit" name="signup-submit">Sign Up</button>
+		    </form>
+	    </div>
+	    <div class="form-container sign-in-container">
+		    <form action="includes/login.inc.php" method="post">
+			    <h1>Sign In</h1>
+			    <div class="social-container">
+				    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			    </div>
+			    <span>or use your account</span>
+                <input type="text" name="mailuid" placeholder="Username" />
+                <!-- <img src="user.svg" id="usericon"> -->
+                <input type="password" name="pwd" placeholder="Password" />
+                <!-- <img src="pass.svg" id="passicon"> -->
+                <!-- <input type="checkbox" class="show" onclick="myFunction()"> -->
+                <!-- <img src="show.png" class="showicon"> -->
+			    <a href="#" class="forgot">Forgot your password?</a>
+			    <button name="login-submit" type="submit">Sign In</button>
+		    </form>
+	    </div>
+	    <div class="overlay-container">
+		    <div class="overlay">
+			    <div class="overlay-panel overlay-left">
+				    <h1>Welcome Back!</h1>
+				    <p>To keep connected with us please login with your personal info.</p>
+				    <button class="ghost" id="signIn">Sign In</button>
+			    </div>
+			    <div class="overlay-panel overlay-right">
+                    <img class="logo" src="logo.png">
+				    <p class="text">Enter your personal details and start your journey with us.</p>
+				    <button class="ghost" id="signUp">Sign Up</button>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+
+    <footer>
+	    <p>
+            &copy <i class="fa fa-heart"></i>2019
+		    <a target="_blank">MangoProduction</a>
+	    </p>
+    </footer>
+    </body>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+	    container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+	    container.classList.remove("right-panel-active");
+        });
+
+        function myFunction() {
+              var x = document.getElementById("input12");
+              var y = document.getElementById("input11");
+              if (x.type == "password" || y.type == "password") {
+                x.type = "text";
+                y.type = "text";
+              } else {
+                x.type = "password";
+                y.type = "password";
+              }
+        }
+    </script>
+</html>

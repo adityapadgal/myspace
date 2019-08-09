@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MySpace | Vehicle Registeration</title>
+    <link rel="stylesheet" href="book_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+
+<div class="topnav">
+  <h1><a>My<span>Space</span></a></h1>
+  <a href="home.php" style="float:right">Back To Home</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Nearby Parking Venues</h2>
+      <h5>Select spot:</h5>
+      <div class="fakeimg" style="height:200px;">
+        <select id="venue" name="venue" required style="margin-bottom: 10px;">
+          <option value="">Select Venue</option>
+          <option value="esquare" onclick="new1()">Esquare</option>
+          <option value="phoenix" onclick="new1()">Phoenix MarketCity</option>
+          <option value="westend" onclick="new1()">Westend Mall</option>
+        </select>
+        <select id="vehicle" name="vehicle_type" required>
+          <option value="">Select Vehicle</option>
+          <option value="motorcycle">Motorcycle</option>
+          <option value="sedan">Sedan</option>
+          <option value="suv">SUV</option>
+        </select>
+      </div>
+    </div>
+    
+  </div>
+  <div class="rightcolumn">
+      <h2>Slot Booking <button class="success" name="submitbtn" onclick="post(slot)">Proceed</button></h2>
+    <div class="card1">
+      <div class="registered" id="venuelayout" style="display: block;">
+        <div class="layout1">
+          <div class="pagination" id="myiv">
+            <a class='list-item' id="slot1" onclick="change(1)">1</a>
+            <a class='list-item' id="slot2" onclick="change(2)">2</a>
+            <a class='list-item' id="slot3" onclick="change(3)">3</a>
+            <a class='list-item' id="slot4" onclick="change(4)">4</a>
+            <a class='list-item' id="slot5" onclick="change(5)">5</a>
+            <a class='list-item' id="slot6" onclick="change(6)">6</a>
+          </div>
+          <div class="pagination1" id="myiv">
+              <a class='list-item' id="slot7" onclick="change(7)">7</a>
+              <a class='list-item' id="slot8" onclick="change(8)">8</a>
+              <a class='list-item' id="slot9" onclick="change(9)">9</a>
+              <a class='list-item' id="slot10" onclick="change(10)">10</a>
+              <a class='list-item' id="slot11" onclick="change(11)">11</a>
+              <a class='list-item' id="slot12" onclick="change(12)">12</a>
+          </div>
+          <div class="pagination2" id="myiv">
+              <a class='list-item' id="slot13" onclick="change(13)">13</a>
+              <a class='list-item' id="slot14" onclick="change(14)">14</a>
+              <a class='list-item' id="slot15" onclick="change(15)">15</a>
+              <a class='list-item' id="slot16" onclick="change(16)">16</a>
+              <a class='list-item' id="slot17" onclick="change(17)">17</a>
+              <a class='list-item' id="slot18" onclick="change(18)">18</a>
+          </div>
+          <div class="pagination3" id="myiv">
+              <a class='list-item' id="slot19" onclick="change(19)">19</a>
+              <a class='list-item' id="slot20" onclick="change(20)">20</a>
+              <a class='list-item' id="slot21" onclick="change(21)">21</a>
+              <a class='list-item' id="slot22" onclick="change(22)">22</a>
+              <a class='list-item' id="slot23" onclick="change(23)">23</a>
+              <a class='list-item' id="slot24" onclick="change(24)">24</a>
+            </div>
+            <div class="pagination4" id="myiv">
+                <a class='list-item' id="slot25" onclick="change(25)">25</a>
+                <a class='list-item' id="slot26" onclick="change(26)">26</a>
+                <a class='list-item' id="slot27" onclick="change(27)">27</a>
+                <a class='list-item' id="slot28" onclick="change(28)">28</a>
+                <a class='list-item' id="slot29" onclick="change(29)">29</a>
+                <a class='list-item' id="slot30" onclick="change(30)">30</a>
+            </div>
+            <div class="pagination5" id="myiv">
+                <a class='list-item' id="slot31" onclick="change(31)">31</a>
+                <a class='list-item' id="slot32" onclick="change(32)">32</a>
+                <a class='list-item' id="slot33" onclick="change(33)">33</a>
+                <a class='list-item' id="slot34" onclick="change(34)">34</a>
+                <a class='list-item' id="slot35" onclick="change(35)">35</a>
+                <a class='list-item' id="slot36" onclick="change(36)">36</a>
+            </div>
+            <div class="pagination" id="myiv">
+                <a class='list-item' id="slot37" onclick="change(37)">37</a>
+                <a class='list-item' id="slot38" onclick="change(38)">38</a>
+                <a class='list-item' id="slot39" onclick="change(39)">39</a>
+                <a class='list-item' id="slot40" onclick="change(40)">40</a>
+                <a class='list-item' id="slot41" onclick="change(41)">41</a>
+                <a class='list-item' id="slot42" onclick="change(42)">42</a>
+              </div>
+              <div class="pagination1" id="myiv">
+                  <a class='list-item' id="slot43" onclick="change(43)">43</a>
+                  <a class='list-item' id="slot44" onclick="change(44)">44</a>
+                  <a class='list-item' id="slot45" onclick="change(45)">45</a>
+                  <a class='list-item' id="slot46" onclick="change(46)">46</a>
+                  <a class='list-item' id="slot47" onclick="change(47)">47</a>
+                  <a class='list-item' id="slot48" onclick="change(48)">48</a>
+              </div>
+              <div class="pagination2" id="myiv">
+                  <a class='list-item' id="slot49" onclick="change(49)">49</a>
+                  <a class='list-item' id="slot50" onclick="change(50)">50</a>
+                  <a class='list-item' id="slot51" onclick="change(51)">51</a>
+                  <a class='list-item' id="slot52" onclick="change(52)">52</a>
+                  <a class='list-item' id="slot53" onclick="change(53)">53</a>
+                  <a class='list-item' id="slot54" onclick="change(54)">54</a>
+              </div>
+              <div class="pagination3" id="myiv">
+                  <a class='list-item' id="slot55" onclick="change(55)">55</a>
+                  <a class='list-item' id="slot56" onclick="change(56)">56</a>
+                  <a class='list-item' id="slot57" onclick="change(57)">57</a>
+                  <a class='list-item' id="slot58" onclick="change(58)">58</a>
+                  <a class='list-item' id="slot59" onclick="change(59)">59</a>
+                  <a class='list-item' id="slot60" onclick="change(60)">60</a>
+                </div>
+                <div class="pagination4" id="myiv">
+                    <a class='list-item' id="slot61" onclick="change(61)">61</a>
+                    <a class='list-item' id="slot62" onclick="change(62)">62</a>
+                    <a class='list-item' id="slot63" onclick="change(63)">63</a>
+                    <a class='list-item' id="slot64" onclick="change(64)">64</a>
+                    <a class='list-item' id="slot65" onclick="change(65)">65</a>
+                    <a class='list-item' id="slot66" onclick="change(66)">66</a>
+                </div>
+                <div class="pagination5" id="myiv">
+                    <a class='list-item' id="slot67" onclick="change(67)">67</a>
+                    <a class='list-item' id="slot68" onclick="change(68)">68</a>
+                    <a class='list-item' id="slot69" onclick="change(69)">69</a>
+                    <a class='list-item' id="slot70" onclick="change(70)">70</a>
+                    <a class='list-item' id="slot71" onclick="change(71)">71</a>
+                    <a class='list-item' id="slot72" onclick="change(72)">72</a>
+                </div>
+                <div class="pagination3" id="myiv">
+                    <a class='list-item' id="slot73" onclick="change(73)">73</a>
+                    <a class='list-item' id="slot74" onclick="change(74)">74</a>
+                    <a class='list-item' id="slot75" onclick="change(75)">75</a>
+                    <a class='list-item' id="slot76" onclick="change(76)">76</a>
+                    <a class='list-item' id="slot77" onclick="change(77)">77</a>
+                    <a class='list-item' id="slot78" onclick="change(78)">78</a>
+                  </div>
+                  <h4 style="position: absolute; margin-left:23%;">OUT</h4>
+                  <div class="pagination4" id="myiv">
+                      <a class='list-item' id="slot79" onclick="change(79)">79</a>
+                      <a class='list-item' id="slot80" onclick="change(80)">80</a>
+                      <a class='list-item' id="slot81" onclick="change(81)">81</a>
+                      <a class='list-item' id="slot82" onclick="change(82)">82</a>
+                      <a class='list-item' id="slot83" onclick="change(83)">83</a>
+                      <a class='list-item' id="slot84" onclick="change(84)">84</a>
+                  </div>
+                  <h4 style="position: absolute; margin-left:49%;">IN</h4>
+                  <div class="pagination5" id="myiv">
+                      <a class='list-item' id="slot85" onclick="change(85)">85</a>
+                      <a class='list-item' id="slot86" onclick="change(86)">86</a>
+                      <a class='list-item' id="slot87" onclick="change(87)">87</a>
+                      <a class='list-item' id="slot88" onclick="change(88)">88</a>
+                      <a class='list-item' id="slot89" onclick="change(89)">89</a>
+                      <a class='list-item' id="slot90" onclick="change(90)">90</a>
+                  </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="footer">
+  <p>
+    ©<i class="fa fa-heart"></i>2019
+    <a target="_blank">MangoProduction</a>
+  </p>
+</div>
+</body>
+
+<script>
+  function new1() {
+    if(document.getElementById("venue").value == "esquare"){
+    console.log("in");
+      document.getElementById("venuelayout").style.display = "block";
+  }
+    else{
+    console.log("out");
+
+      document.getElementById("venuelayout").style.display = "none";
+      }
+  }
+</script>
+
+<script>
+  var slot = new Array();
+  var i = 0;
+  var j = 0;
+  function change(slots) {
+          if(document.getElementById("slot"+slots).style.backgroundColor == "rgb(75, 222, 144)"){
+            document.getElementById("slot"+slots).style.backgroundColor = "";
+            document.getElementById("slot"+slots).style.color = "";
+            document.getElementById("slot"+slots).innerHTML= slots;
+            --i;
+            slot[i]=null;
+            }
+          else{
+            document.getElementById("slot"+slots).style.backgroundColor = "rgb(75, 222, 144)";
+            document.getElementById("slot"+slots).style.color = "white";
+            document.getElementById("slot"+slots).innerHTML= slots;
+            slot[i]=slots;
+            console.log(i,slot[i]);
+            ++i;
+          }
+        }
+        function post(slot) {
+        
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = 'includes/submit.inc.php';
+
+        const hiddenField = document.createElement('input');
+        hiddenField.type = 'hidden';
+        hiddenField.name = 'slot';
+        hiddenField.value = slot;
+
+        form.appendChild(hiddenField);
+        document.body.appendChild(form);
+        form.submit();
+        }
+</script>
+
+</html>
